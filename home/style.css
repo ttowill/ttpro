@@ -1,0 +1,403 @@
+body{
+	/* background: url("../background.png") no-repeat fixed center; */
+	background-size: cover;
+	margin: 0;
+	transition: 1s;
+}
+.darkMode body{
+	/* background-image: url("../darkMode_background.png"); */
+	color: white;
+}
+
+/* background */
+#background{
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+#background div{
+	height: 100%;
+	width: 100%;
+	/* display: none; */
+}
+#background_back{
+	width: auto;
+	z-index: -2;
+}
+#background_front{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#background_front img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+#background_back img{
+	height: 900px;
+	position: absolute;
+}
+#background_back_back{
+	left: 1624px;
+}
+
+
+/*main*/
+.main{
+	text-align: center;
+	display: none;
+}
+.main div{
+	width: 50%;
+	background: var(--white);
+	border-radius: 10px;
+	margin: 30px 25%;
+	padding: 5px;
+	display: none;
+	transition: background 1s;
+}
+.darkMode .main div{
+	background: var(--black);
+}
+.main h1{
+	padding-top: 70px;
+	margin: 0;
+}
+.main span{
+	display: none;
+}
+.main img{
+	height: 25px;
+}
+.main p{
+	margin: 0;
+}
+table{
+	width: 100%;
+	margin: 0;
+}
+td:nth-child(1){
+	vertical-align: top;
+	text-align: right;
+}
+td:nth-child(2){
+	text-align: left;
+}
+.main a{
+	text-decoration: none;
+	color: blue;
+	transition: color 0.3s linear;
+}
+.main a:hover{
+	color: orange;
+}
+.main a:focus{
+	color: red;
+}
+.darkMode .main a{
+	color: orange;
+}
+.darkMode .main a:hover{
+	color: red;
+}
+.darkMode .main a:focus{
+	color: red;
+}
+.load{
+	height: 40px;
+	width: 10%;
+	padding-top: 10px;
+	margin: 10px 45%;
+	background: var(--white);
+	border-radius: 5px;
+	text-align: center;
+}
+.last_text_box{
+	color: var(--gray);
+	text-align: center;
+}
+/* musicPlayer in .main */
+#musicPlayer_filename{
+	height: 25px;
+	width: 90%;
+	font-size: 15px;
+	border: 3px solid black;
+	border-radius: 5px;
+	background: var(--white);
+	transition: 1s;
+}
+.darkMode #musicPlayer_filename{
+	background: var(--black);
+	border: white solid 1px;
+	color: white;
+}
+#musicPlayer_btn{
+	width: 90%;
+	background: blue;
+	color: white;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 10px auto;
+	cursor: pointer;
+	transition: 0.3s;
+}
+#musicPlayer_btn:hover{
+	background: #55f;
+}
+.darkMode #musicPlayer_btn{
+	background: orange;
+	color: black;
+}
+.darkMode #musicPlayer_btn:hover{
+	background: #fd5;
+}
+
+/*top*/
+.top{
+	height: 50px;
+	width: 100%;
+	padding: 10px;
+	background: var(--white);
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: none;
+	transition: 1s;
+}
+.darkMode .top{
+	background-color: var(--black);
+}
+.top p{
+	margin: 0;
+}
+.top_left{
+	padding: 0 10px;
+	display: flex;
+}
+.top_left_text{
+	padding: 15px;
+}
+.top_left_text a{
+	text-decoration: none;
+	width: 42px;
+	color: black;
+	margin: 5px;
+	transition: color 0.3s linear;
+}
+.top_left_text a:hover{
+	color: blue;
+}
+.darkMode .top_left_text a{
+	color: white;
+}
+.darkMode .top_left_text a:hover{
+	color: orange;
+}
+.search{
+	border: 1px solid var(--gray);
+	border-radius: 5px;
+	margin: 5px;
+	margin-right: 50px;
+	display: flex;
+}
+#search_input{
+	height: 36px;
+	width: 250px;
+	font-size: 15px;
+	border: none;
+	border-radius: 5px 0 0 5px;
+	transition: background 0.3s linear;
+	transition: background-color 1s;
+}
+#search_input:focus{
+	background: var(--white);
+}
+.darkMode #search_input{
+	background-color: var(--black);
+	color: white;
+}
+#search_icon{
+	width: 38px;
+	cursor: pointer;
+	border-radius: 0 5px 5px 0;
+	background: var(--white);
+	transition: background 0.3s linear;
+	transition: background-color 1s;
+}
+#search_icon:hover{
+	background: var(--gray);
+}
+.darkMode #search_icon{
+	background-color: var(--black);
+}
+.darkMode #search_icon:hover{
+	background: var(--black_gray);
+}
+.search_icon_item{
+	margin: 10px;
+}
+.top_right{
+	height: 50px;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	display: flex;
+}
+.time{
+	text-align: center;
+}
+
+/*bottom*/
+.bottom{
+	width: 50px;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	display: none;
+}
+.bottom div{
+	height: 50px;
+	width: 50px;
+	background: var(--white);
+	text-align: center;
+	cursor: pointer;
+	border-radius: 5px;
+	margin: 10px 0;
+	transition: 0.3s linear;
+}
+.bottom div:hover{
+	background: var(--gray);
+}
+.darkMode .bottom div{
+	background: var(--black);
+}
+.darkMode .bottom div:hover{
+	background: var(--black_gray);
+}
+#to_top,#home{
+	display: none;
+}
+
+/*info*/
+.info{
+	width: 300px;
+	background: white;
+	text-align: center;
+	box-shadow: 5px 5px 10px var(--gray);
+	padding: 10px;
+	border: 3px solid var(--gray);
+	border-radius: 10px;
+}
+.darkMode .info{
+	background: black;
+}
+.info_box{
+	position: fixed;
+	background-color: rgba(30,30,30,0.5);
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	padding-left: calc(50% - 150px);
+	padding-top: 200px;
+	display: none;
+}
+.info div{
+	width: 100%;
+	text-align: center;
+	background: blue;
+	color: white;
+	padding: 5px 0;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background 0.3s linear;
+}
+.info div:hover{
+	background: #55f;
+}
+.darkMode .info div{
+	background: orange;
+	color: black;
+}
+.darkMode .info div:hover{
+	background: #fd5;
+}
+
+/*player*/
+.musicPlayer_box{
+	position: fixed;
+	background-color: rgba(30,30,30,0.5);
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	padding-left: calc(50% - 200px);
+	padding-top: 200px;
+	display: none;
+}
+.musicPlayer{
+	width: 380px;
+	background: white;
+	text-align: center;
+	align-items: center;
+	box-shadow: 5px 5px 10px var(--gray);
+	border: 3px solid var(--gray);
+	padding: 10px;
+	border-radius: 10px;
+}
+.darkMode .musicPlayer{
+	background: black;
+}
+.musicPlayer .title{
+	text-align: center;
+}
+.musicPlayer #close{
+	height: 35px;
+	width: 35px;
+	background: red;
+	border-radius: 3px;
+	cursor: pointer;
+	position: fixed;
+	top: 210px;
+	right: calc(50% - 190px);
+	transition: 0.3s linear;
+}
+.musicPlayer #close:hover{
+	background: #f55;
+}
+.musicPlayer #stop,.musicPlayer #play{
+	background: white;
+	padding: 10px;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: 0.3s linear;
+}
+.musicPlayer #play:hover,.musicPlayer #stop:hover{
+	background: var(--white);
+}
+.darkMode .musicPlayer #stop,.darkMode .musicPlayer #play{
+	background: black;
+}
+.darkMode .musicPlayer #stop:hover,.darkMode .musicPlayer #play:hover{
+	background: var(--black);
+}
+#musicPlayer_volume{
+	cursor: pointer;
+}
+#musicPlayer_duration{
+	width: 100%;
+	height: 20px;
+	background: var(--gray);
+	margin-bottom: 5px;
+}
+#musicPlayer_currentTime{
+	background: blue;
+	height: 20px;
+	width: 0;
+	text-align: right;
+	transition: 0.5s;
+}
